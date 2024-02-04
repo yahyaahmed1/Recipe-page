@@ -1,0 +1,152 @@
+// sass --watch .\sass\index.scss .\css\index.css
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+@import "_variabales.scss";
+
+.heading {
+	font-family: "Young Serif", serif;
+	color: $Nutmeg;
+}
+
+body {
+	font-size: 16px;
+	background-color: $Eggshell;
+	font-family: "Outfit", sans-serif;
+}
+hr {
+	margin: 30px auto;
+}
+h3 {
+	margin-bottom: 20px;
+}
+.recipe-card {
+	padding: 30px;
+	background-color: $White;
+	border-radius: 25px;
+	margin: 50px auto;
+	.recipe-header {
+		img {
+			width: 100%;
+			border-radius: 15px;
+		}
+		h1 {
+			font-family: "Young Serif", serif;
+			margin-top: 25px;
+			color: $Dark-Charcoal;
+			margin-bottom: 20px;
+		}
+		p.desc {
+			color: $Wenge-Brown;
+			margin-bottom: 40px;
+		}
+		.preparation-time-part {
+			padding: 25px;
+			background-color: $Rose-White;
+			border-radius: 10px;
+			margin-bottom: 25px;
+			h5 {
+				color: $Dark-Raspberry;
+				font-weight: 600;
+			}
+			li {
+				color: $Dark-Charcoal;
+				padding-left: 15px;
+			}
+			li::marker {
+				color: $Dark-Raspberry;
+			}
+			li b {
+				color: $Wenge-Brown;
+			}
+		}
+	}
+	.ingredients {
+		.ingredients-list {
+			margin-bottom: 25px;
+			li {
+				color: $Wenge-Brown;
+			}
+			li::marker {
+				color: $Nutmeg;
+			}
+		}
+	}
+	.instructions {
+		.instructions-list {
+			li::marker {
+				color: $Nutmeg;
+				font-weight: bold;
+			}
+			li {
+				color: $Wenge-Brown;
+				padding-left: 15px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.nutrition {
+		p.desc {
+			color: $Wenge-Brown;
+		}
+		.table {
+			tr:last-child td {
+				border-bottom: none;
+			}
+			td.name {
+				text-indent: 25px;
+				color: $Wenge-Brown;
+				width: 300px;
+				max-width: 300px;
+				min-width: 150px;
+			}
+			td.amount {
+				font-weight: bold;
+				color: $Nutmeg;
+			}
+		}
+	}
+}
+@media (max-width: 425px) {
+	hr {
+		margin: 30px;
+	}
+	.container {
+		margin: 0;
+		padding: 0;
+	}
+	.recipe-card {
+		width: 100%;
+		margin-top: 0;
+		border-radius: 0;
+		padding: 0 0 30px 0;
+		.recipe-header {
+			img {
+				border-radius: 0;
+			}
+			h1,
+			p {
+				padding: 0 30px;
+			}
+			.preparation-time-part {
+				margin: 0 30px 25px;
+			}
+		}
+		.ingredients {
+			padding: 0 30px;
+		}
+		.instructions {
+			padding: 0 30px;
+		}
+		.nutrition {
+			padding: 0 30px;
+		}
+	}
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
